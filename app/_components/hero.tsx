@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon } from "@/app/_components/social-icons";
+// import { GitHubIcon, LinkedInIcon } from "@/app/_components/social-icons";
 
 export default function Hero() {
   return (
@@ -19,13 +19,13 @@ export default function Hero() {
         </div>
         <div className="flex items-center gap-x-4">
           <a href="https://github.com/handikaharianto" target="_blank">
-            <GitHubIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" />
+            {/* <GitHubIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" /> */}
           </a>
           <a
             href="https://www.linkedin.com/in/handika-harianto-ew-jong/"
             target="_blank"
           >
-            <LinkedInIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" />
+            {/* <LinkedInIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" /> */}
           </a>
         </div>
       </div>
