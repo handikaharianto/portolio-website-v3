@@ -1,4 +1,5 @@
-type IconProps = {
+export type IconProps = {
+  className?: string;
   [key: string]: any;
 };
 
