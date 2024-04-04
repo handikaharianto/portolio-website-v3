@@ -58,7 +58,7 @@ export default function MobileNav() {
     <IsInsideMobileNavigationContext.Provider value={true}>
       <button
         type="button"
-        className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 md:hidden"
+        className="flex h-6 w-6 items-center justify-center rounded-md transition hover:bg-zinc-900/5 focus:outline-2 focus:outline-offset-2 focus:outline-blue-600 md:hidden"
         aria-label="Toggle navigation"
         onClick={toggle}
       >

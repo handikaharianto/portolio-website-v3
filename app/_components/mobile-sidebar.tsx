@@ -11,7 +11,7 @@ export default function MobileSidebar() {
           <Link
             key={navItem.name}
             href={navItem.link}
-            className="border-l-2 border-transparent py-3 transition-all duration-300 ease-in-out hover:border-blue-600 hover:pl-5 hover:text-blue-600"
+            className="transition-spacing border-l-2 border-transparent py-3 duration-300 ease-in-out hover:border-blue-600 hover:pl-5 hover:text-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
           >
             {navItem.name}
           </Link>
