@@ -11,7 +11,8 @@ export default function ResumeButton({
 }: ResumeButtonProps) {
   return (
     <a
-      href="#"
+      href="/resume.pdf"
+      target="_blank"
       className={`blue-600 group relative hidden cursor-pointer rounded-full bg-blue-600 p-px text-sm font-semibold leading-6 text-white no-underline shadow-md focus:outline-2 focus:outline-offset-2 focus:outline-blue-600 md:inline-block ${className}`}
       {...props}
     >
