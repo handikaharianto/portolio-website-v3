@@ -21,6 +21,27 @@ function ArrowUpRightIcon(props: IconProps) {
   );
 }
 
+function LinkIcon(props: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M15 3h6v6" />
+      <path d="M10 14 21 3" />
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    </svg>
+  );
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="relative overflow-hidden">
@@ -34,11 +55,11 @@ export default function Projects() {
             Things I&apos;ve built so far.
           </h2>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid auto-rows-fr gap-8 md:grid-cols-2 xl:grid-cols-4">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative flex flex-col gap-y-8 overflow-hidden rounded-xl border border-zinc-100 bg-white p-6 shadow-sm transition duration-300 hover:border-zinc-200 hover:shadow-md"
+              className="group relative flex h-full flex-col gap-y-8 overflow-hidden rounded-xl border border-zinc-100 bg-white p-6 shadow-sm transition duration-300 hover:border-zinc-200 hover:shadow-md"
             >
               <div className="space-y-2">
                 <h3 className="text-lg font-bold tracking-wide text-zinc-800">
@@ -46,18 +67,18 @@ export default function Projects() {
                 </h3>
                 <p className="text-zinc-600">{project.description}</p>
               </div>
-              <div className="mt-auto flex flex-wrap gap-3">
+              <div className="mt-auto flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-blue-50 px-2 py-1 text-sm font-medium text-blue-600 shadow-sm ring-1 ring-inset ring-blue-100"
+                    className="rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-600 shadow-sm ring-1 ring-inset ring-blue-100"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
               <div className="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 backdrop-blur transition duration-300 ease-in-out group-hover:opacity-100">
-                <div>
+                <div className="flex items-center gap-x-4">
                   {project.gitHubUrl && (
                     <a
                       href={project.gitHubUrl}
@@ -65,6 +86,15 @@ export default function Projects() {
                       className="focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
                     >
                       <GitHubIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" />
+                    </a>
+                  )}
+                  {project.websiteUrl && (
+                    <a
+                      href={project.websiteUrl}
+                      target="_blank"
+                      className="focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
+                    >
+                      <LinkIcon className="h-6 w-6 stroke-zinc-500 transition duration-300 hover:stroke-zinc-700" />
                     </a>
                   )}
                 </div>
