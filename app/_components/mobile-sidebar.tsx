@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { navItems } from "@/app/_components/header";
+import ResumeButton from "@/app/_components/resume-button";
 
 export default function MobileSidebar() {
   return (
@@ -10,13 +11,15 @@ export default function MobileSidebar() {
           <Link
             key={navItem.name}
             href={navItem.link}
-            className="py-3 transition-all duration-300 ease-out hover:bg-zinc-100/70 hover:pl-5"
+            className="border-l-2 border-transparent py-3 transition-all duration-300 ease-in-out hover:border-blue-600 hover:pl-5 hover:text-blue-600"
           >
             {navItem.name}
           </Link>
         ))}
       </div>
-      {/* TODO: Add resume button here */}
+      <div className="!mt-12 flex justify-center">
+        <ResumeButton className="mx-auto !block" />
+      </div>
     </div>
   );
 }

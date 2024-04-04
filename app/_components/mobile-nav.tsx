@@ -66,7 +66,7 @@ export default function MobileNav() {
       </button>
       {!isInsideMobileNavigation && (
         <Transition show={isOpen} as={Fragment}>
-          <Dialog onClose={close} className="fixed inset-0 z-50 lg:hidden">
+          <Dialog onClose={close} className="fixed inset-0 z-50 md:hidden">
             <Transition.Child
               as={Fragment}
               enter="duration-300 ease-out"
@@ -103,7 +103,7 @@ export default function MobileNav() {
               >
                 <motion.div
                   layoutScroll
-                  className="ring-zinc-900/7.5 fixed bottom-0 right-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 min-[416px]:max-w-sm sm:px-6 sm:pb-10"
+                  className="ring-zinc-900/7.5 fixed bottom-0 right-0 top-14 w-full overflow-y-auto bg-white p-8  shadow-lg shadow-zinc-900/10 min-[416px]:max-w-sm sm:px-6 sm:pb-10"
                 >
                   <MobileSidebar />
                 </motion.div>

@@ -7,10 +7,10 @@ export default function Skills() {
     <section id="skills">
       <div className="mx-auto max-w-7xl rounded-2xl bg-zinc-50 px-6 py-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-y-4">
-          <div className="rounded-full bg-zinc-100 px-3 py-1.5 text-sm font-medium tracking-wider text-zinc-800">
+          <div className="rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium tracking-wider text-blue-500">
             SKILLS
           </div>
-          <h2 className="text-center text-4xl font-medium !leading-tight md:text-5xl">
+          <h2 className="text-center text-4xl font-medium !leading-tight text-zinc-800 md:text-5xl">
             Bring out seamless functionalities with various technologies.
           </h2>
         </div>

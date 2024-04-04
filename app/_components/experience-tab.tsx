@@ -1,6 +1,8 @@
 import { Tab } from "@headlessui/react";
 
 import { experiences } from "@/app/_data/experiences";
+import clsx from "clsx";
+import { Fragment } from "react";
 
 function PlayIcon() {
   return (
@@ -14,6 +16,7 @@ function PlayIcon() {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="stroke-blue-600"
     >
       <polygon points="6 3 20 12 6 21 6 3" />
     </svg>
@@ -25,15 +28,23 @@ export default function ExperienceTab() {
     <Tab.Group
       vertical
       as="div"
-      className="space-y-8 md:flex md:space-x-8 md:space-y-0"
+      className="relative space-y-8 md:flex md:space-x-8 md:space-y-0"
     >
       <Tab.List className="flex md:flex-col">
         {experiences.map((experience) => (
-          <Tab
-            key={experience.company}
-            className="border-b-[3px] border-gray-300 px-4 py-3 text-left font-semibold md:border-b-0 md:border-l-[3px]"
-          >
-            {experience.company}
+          <Tab key={experience.company} as={Fragment}>
+            {({ selected }) => (
+              <button
+                className={clsx(
+                  "border-b-[3px] px-4 py-3 text-left font-semibold transition duration-300 focus:outline-none md:border-b-0 md:border-l-[3px]",
+                  selected
+                    ? "border-blue-500 text-blue-600"
+                    : "border-blue-100 hover:text-blue-600",
+                )}
+              >
+                {experience.company}
+              </button>
+            )}
           </Tab>
         ))}
       </Tab.List>
@@ -43,7 +54,7 @@ export default function ExperienceTab() {
             <div className="space-y-1">
               <h3 className="text-xl font-bold tracking-wide md:text-2xl">
                 <span className="text-gray-900">{experience.position}</span>{" "}
-                <span className="">@ {experience.company}</span>
+                <span className="text-blue-600">@ {experience.company}</span>
               </h3>
               <p className="text-sm md:text-base">{experience.period}</p>
             </div>
@@ -57,11 +68,11 @@ export default function ExperienceTab() {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {experience.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full bg-gray-50 px-2 py-1 text-sm font-medium text-gray-600 shadow-sm ring-1 ring-inset ring-gray-200"
+                  className="rounded-full bg-blue-50 px-2 py-1 text-sm font-medium text-blue-600 shadow-sm ring-1 ring-inset ring-blue-100"
                 >
                   {tech}
                 </span>

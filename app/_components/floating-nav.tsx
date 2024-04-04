@@ -1,12 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
+import React from "react";
+import { AnimatePresence } from "framer-motion";
 import { cn } from "@/app/_utils/cn";
 import Link from "next/link";
 
@@ -18,42 +13,9 @@ type FloatingNavProps = {
 };
 
 export default function FloatingNav({ navItems }: FloatingNavProps) {
-  const { scrollYProgress } = useScroll();
-
-  const [visible, setVisible] = useState(true);
-
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
-      //   if (scrollYProgress.get() < 0.05) {
-      //     setVisible(true);
-      //   } else {
-      //     if (direction < 0) {
-      //       setVisible(true);
-      //     } else {
-      //       setVisible(false);
-      //     }
-      //   }
-      //   if ()
-    }
-  });
-
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
+      <div
         className={cn(
           "fixed inset-x-0 top-7 z-[5000] mx-auto hidden max-w-fit items-center justify-center space-x-4 rounded-full border border-gray-100 bg-white px-8 py-2 shadow md:flex",
         )}
@@ -63,18 +25,13 @@ export default function FloatingNav({ navItems }: FloatingNavProps) {
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative flex items-center space-x-1 font-medium text-neutral-600 hover:text-neutral-500 dark:text-neutral-50 dark:hover:text-neutral-300",
+              "relative flex items-center space-x-1 font-medium text-zinc-600 transition duration-300 hover:text-blue-600",
             )}
           >
-            {/* <span className="block sm:hidden">{navItem.icon}</span> */}
             <span className="block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button> */}
-      </motion.div>
+      </div>
     </AnimatePresence>
   );
 }
