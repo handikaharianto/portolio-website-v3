@@ -3,7 +3,7 @@ import { GitHubIcon, LinkedInIcon } from "@/app/_components/social-icons";
 export default function Hero() {
   return (
     <section id="about">
-      <div className="bg-dot-black/[0.2] relative flex h-screen w-full items-center justify-center bg-white">
+      <div className="relative flex h-screen w-full items-center justify-center bg-white bg-dot-black/[0.2]">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
         <div className="relative mx-auto grid max-w-7xl gap-y-6 p-6 py-52 md:py-32 xl:px-0">
           <div className="mx-auto max-w-2xl space-y-6 text-center">
@@ -20,12 +20,17 @@ export default function Hero() {
             </p>
           </div>
           <div className="mx-auto flex items-center gap-x-4">
-            <a href="https://github.com/handikaharianto" target="_blank">
+            <a
+              href="https://github.com/handikaharianto"
+              target="_blank"
+              className="focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
+            >
               <GitHubIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" />
             </a>
             <a
               href="https://www.linkedin.com/in/handika-harianto-ew-jong/"
               target="_blank"
+              className="focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
             >
               <LinkedInIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" />
             </a>

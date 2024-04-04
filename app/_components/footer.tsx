@@ -7,7 +7,7 @@ export default function Footer() {
           <a
             href="https://github.com/handikaharianto"
             target="_blank"
-            className="font-bold transition duration-300 hover:text-blue-600"
+            className="font-bold transition duration-300 hover:text-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
           >
             @handikaharianto
           </a>

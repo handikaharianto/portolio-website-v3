@@ -12,7 +12,7 @@ export default function ResumeButton({
   return (
     <a
       href="#"
-      className={`group relative hidden cursor-pointer rounded-full bg-blue-600 p-px text-sm font-semibold leading-6 text-white no-underline shadow-md md:inline-block ${className}`}
+      className={`blue-600 group relative hidden cursor-pointer rounded-full bg-blue-600 p-px text-sm font-semibold leading-6 text-white no-underline shadow-md focus:outline-2 focus:outline-offset-2 focus:outline-blue-600 md:inline-block ${className}`}
       {...props}
     >
       <span className="absolute inset-0 overflow-hidden rounded-full">

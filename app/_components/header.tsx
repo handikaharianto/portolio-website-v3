@@ -60,7 +60,7 @@ const Header = forwardRef<any, HeaderProps>(function Header(props, ref) {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-8 xl:px-0">
           <Link
             href="/"
-            className="text-lg font-bold text-zinc-800 transition duration-300 hover:text-blue-600 md:text-xl"
+            className="text-lg font-bold text-zinc-800 transition duration-300 hover:text-blue-600 focus:outline-2 focus:outline-offset-2 focus:outline-blue-600 md:text-xl"
           >
             @handikaharianto
           </Link>

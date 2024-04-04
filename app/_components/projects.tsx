@@ -59,7 +59,11 @@ export default function Projects() {
               <div className="absolute inset-0 flex items-center justify-center bg-white/50 opacity-0 backdrop-blur transition duration-300 ease-in-out group-hover:opacity-100">
                 <div>
                   {project.gitHubUrl && (
-                    <a href={project.gitHubUrl} target="_blank">
+                    <a
+                      href={project.gitHubUrl}
+                      target="_blank"
+                      className="focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
+                    >
                       <GitHubIcon className="h-7 w-7 fill-zinc-500 transition duration-300 hover:fill-zinc-700" />
                     </a>
                   )}

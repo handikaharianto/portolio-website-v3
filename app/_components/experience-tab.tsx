@@ -50,7 +50,10 @@ export default function ExperienceTab() {
       </Tab.List>
       <Tab.Panels className="*:py-2">
         {experiences.map((experience, index) => (
-          <Tab.Panel key={`${experience}-${index}`} className="space-y-4">
+          <Tab.Panel
+            key={`${experience}-${index}`}
+            className="space-y-4 focus:outline-none"
+          >
             <div className="space-y-1">
               <h3 className="text-xl font-bold tracking-wide md:text-2xl">
                 <span className="text-gray-900">{experience.position}</span>{" "}

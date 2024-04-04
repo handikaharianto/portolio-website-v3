@@ -25,7 +25,7 @@ export default function FloatingNav({ navItems }: FloatingNavProps) {
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative flex items-center space-x-1 font-medium text-zinc-600 transition duration-300 hover:text-blue-600",
+              "relative flex items-center space-x-1 font-medium text-zinc-600 transition duration-300 focus:outline-2 focus:outline-offset-2 focus:outline-blue-600",
             )}
           >
             <span className="block text-sm">{navItem.name}</span>
