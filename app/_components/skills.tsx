@@ -5,7 +5,7 @@ import SkillsItem from "@/app/_components/skills-item";
 export default function Skills() {
   return (
     <section id="skills">
-      <div className="mx-auto max-w-7xl rounded-2xl bg-zinc-50 px-6 py-16">
+      <div className="mx-auto max-w-7xl rounded-2xl bg-zinc-50 px-6 py-20 md:py-32">
         <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-y-4">
           <div className="rounded-full bg-blue-50 px-3 py-1.5 text-sm font-medium tracking-wider text-blue-500">
             SKILLS
