@@ -19,11 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sofiaSans.className} antialiased`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body className={`${sofiaSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
