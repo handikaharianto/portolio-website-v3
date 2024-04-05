@@ -15,10 +15,6 @@ export const navItems = [
     link: "/",
   },
   {
-    name: "About",
-    link: "#about",
-  },
-  {
     name: "Skills",
     link: "#skills",
   },
