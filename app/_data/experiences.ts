@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
       "Blueprint JS",
     ],
     description: [
-      "Developed a full stack web application for a chatbot-based automation system named Digital Workspace Assistant using React/Typescript, ExpressJS, NodeJS, and MongoDB.",
+      "Developed a full stack web application for a chatbot-based automation system named Digital Workspace Assistant using React/Typescript, Express, Node.js, and MongoDB.",
       "Implemented a multi-channel feature that allows businesses to create their own chatbot on both WhatsApp and Telegram platform.",
       "Continued the development of custom data table to manage user data by implementing various functionalities, such as server-side pagination, context menu, etc.",
     ],
