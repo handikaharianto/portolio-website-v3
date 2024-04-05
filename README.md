@@ -12,4 +12,5 @@
 ## Todo:
 
 - [ ] SEO
-- [ ] smooth scrolling
+- [x] smooth scrolling
+- [ ] Sitemaps(?)
