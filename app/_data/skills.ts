@@ -18,7 +18,7 @@ export const skills: Skill[] = [
   },
   {
     title: "GitHub",
-    image: "/skills/GitHub.svg",
+    image: "/skills/github.svg",
   },
   {
     title: "JavaScript",
