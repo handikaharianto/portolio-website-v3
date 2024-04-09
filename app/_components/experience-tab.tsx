@@ -3,6 +3,7 @@ import { Tab } from "@headlessui/react";
 import { experiences } from "@/app/_data/experiences";
 import clsx from "clsx";
 import { Fragment } from "react";
+import { motion } from "framer-motion";
 
 function PlayIcon() {
   return (
@@ -31,22 +32,33 @@ export default function ExperienceTab() {
       className="relative space-y-8 md:flex md:space-x-8 md:space-y-0"
     >
       <Tab.List className="flex md:flex-col">
-        {experiences.map((experience) => (
-          <Tab key={experience.company} as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={clsx(
-                  "border-b-[3px] px-4 py-3 text-left font-semibold transition duration-300 focus:outline-none md:border-b-0 md:border-l-[3px]",
-                  selected
-                    ? "border-blue-500 text-blue-600"
-                    : "border-blue-100 hover:text-blue-600",
-                )}
-              >
-                {experience.company}
-              </button>
-            )}
-          </Tab>
-        ))}
+        <div className="relative">
+          {experiences.map((experience) => (
+            <Tab key={experience.company} as={Fragment}>
+              {({ selected }) => (
+                <button
+                  className={clsx(
+                    "relative px-4 py-3 text-left font-semibold transition duration-300 focus:outline-none",
+                    selected ? "text-blue-600" : "hover:text-blue-600",
+                  )}
+                >
+                  {experience.company}
+                  {selected && (
+                    <motion.div
+                      layoutId="underline"
+                      transition={{
+                        ease: "backInOut",
+                        duration: 0.3,
+                      }}
+                      className="absolute bottom-0 left-0 z-10 h-[3px] w-full rounded-full bg-blue-600 md:top-0 md:h-full md:w-[3px]"
+                    ></motion.div>
+                  )}
+                </button>
+              )}
+            </Tab>
+          ))}
+          <div className="absolute bottom-0 left-0 h-[3px] w-full rounded-full bg-blue-100 md:top-0 md:h-full md:w-[3px]"></div>
+        </div>
       </Tab.List>
       <Tab.Panels className="*:py-2">
         {experiences.map((experience, index) => (
