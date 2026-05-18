@@ -22,6 +22,7 @@ export const projects: Project[] = [
       "Mapbox",
     ],
     gitHubUrl: "https://github.com/handikaharianto/foodly",
+    websiteUrl: "https://foodly-app.onrender.com/"
   },
   {
     title: "URL Shortener",
@@ -35,6 +36,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
     ],
     gitHubUrl: "https://github.com/handikaharianto/url-shortener",
+    websiteUrl: "https://url-shortener-pi-three.vercel.app/"
   },
   {
     title: "Budgeting App",

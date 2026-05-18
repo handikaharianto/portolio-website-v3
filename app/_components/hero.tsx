@@ -11,12 +11,8 @@ export default function Hero() {
               Hey there! My name is Handika 👋🏻
             </h1>
             <p className="text-lg leading-relaxed tracking-wide text-zinc-600 md:text-xl">
-              I&apos;m a recent CS graduate and Full Stack Developer who&apos;s
+              I&apos;m a Full Stack Developer and Software Engineering student at Concordia University who&apos;s
               passionate about making web applications look pretty ✨
-              <br />
-              <br />
-              Aside from web development, I&apos;m currently exploring UI/UX
-              design.
             </p>
           </div>
           <div className="mx-auto flex items-center gap-x-4">
