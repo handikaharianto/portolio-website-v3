@@ -7,7 +7,7 @@ const sofiaSans = Sofia_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "handikaharianto",
   description:
-    "I'm a recent CS graduate and Full Stack Developer who's passionate about making web applications look pretty.",
+    "I'm a Full Stack Developer and Software Engineering student at Concordia University who's passionate about making web applications look pretty",
 };
 
 export default function RootLayout({
