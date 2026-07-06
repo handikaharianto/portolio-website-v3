@@ -8,6 +8,20 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Cordia",
+    description:
+      "A web-based classroom availability finder for Concordia students.",
+    technologies: [
+      "Next.js",
+      "Supabase",
+      "shadcn/ui",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    gitHubUrl: "https://github.com/handikaharianto/cordia-app",
+    websiteUrl: "https://cordia-app.vercel.app/",
+  },
+  {
     title: "Foodly",
     description:
       "A web-based food donation system to facilitate food donation tracking and management.",
@@ -22,7 +36,7 @@ export const projects: Project[] = [
       "Mapbox",
     ],
     gitHubUrl: "https://github.com/handikaharianto/foodly",
-    websiteUrl: "https://foodly-app.onrender.com/"
+    websiteUrl: "https://foodly-app.onrender.com/",
   },
   {
     title: "URL Shortener",
@@ -36,7 +50,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
     ],
     gitHubUrl: "https://github.com/handikaharianto/url-shortener",
-    websiteUrl: "https://url-shortener-pi-three.vercel.app/"
+    websiteUrl: "https://url-shortener-pi-three.vercel.app/",
   },
   {
     title: "Budgeting App",
