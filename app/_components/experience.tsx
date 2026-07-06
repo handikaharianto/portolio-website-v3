@@ -16,7 +16,7 @@ export default function Experience() {
             My past work experience in a nutshell.
           </h2>
         </div>
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           <ExperienceTab />
         </div>
       </div>

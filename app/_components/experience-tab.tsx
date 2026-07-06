@@ -29,10 +29,10 @@ export default function ExperienceTab() {
     <Tab.Group
       vertical
       as="div"
-      className="relative space-y-8 md:flex md:space-x-8 md:space-y-0"
+      className="relative space-y-8 md:grid md:grid-cols-12 md:space-x-8 md:space-y-0"
     >
-      <Tab.List className="flex md:flex-col">
-        <div className="relative">
+      <Tab.List className="flex md:col-span-3 md:flex-col">
+        <div className="relative md:flex md:flex-col">
           {experiences.map((experience) => (
             <Tab key={experience.company} as={Fragment}>
               {({ selected }) => (
@@ -60,7 +60,7 @@ export default function ExperienceTab() {
           <div className="absolute bottom-0 left-0 h-[3px] w-full rounded-full bg-blue-100 md:top-0 md:h-full md:w-[3px]"></div>
         </div>
       </Tab.List>
-      <Tab.Panels className="*:py-2">
+      <Tab.Panels className="*:py-2 md:col-span-9">
         {experiences.map((experience, index) => (
           <Tab.Panel
             key={`${experience}-${index}`}
